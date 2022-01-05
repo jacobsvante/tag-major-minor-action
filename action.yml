@@ -2,7 +2,7 @@ name: tag-major-minor
 description: Create git tags for the specified major and minor version identifiers
 branding:
   icon: tag
-  color: blue
+  color: gray-dark
 inputs:
   major:
     description: The major version to tag
