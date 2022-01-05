@@ -1,0 +1,40 @@
+name: tag-major-minor
+description: Create git tags for the specified major and minor version identifiers
+branding:
+  icon: tag
+  color: blue
+inputs:
+  major:
+    description: The major version to tag
+    required: true
+  minor:
+    description: The major version to tag
+    required: true
+  tag-prefix:
+    description: A prefix to add to the git tag
+    required: true
+    default: v
+  tag-message-prefix:
+    description: "Add this to the start of the git tag message"
+    required: true
+    default: "Release "
+runs:
+  using: composite
+  steps:
+    - name: Tag major and minor versions
+      shell: bash
+      run: |-
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+
+        git tag --delete ${{ inputs.tag-prefix }}${{ inputs.major }} || true
+        git tag --delete ${{ inputs.tag-prefix }}${{ inputs.major }}.${{ inputs.minor }} || true
+
+        git push origin :${{ inputs.tag-prefix }}${{ inputs.major }} || true
+        git push origin :${{ inputs.tag-prefix }}${{ inputs.major }}.${{ inputs.minor }} || true
+
+        git tag --annotate ${{ inputs.tag-prefix }}${{ inputs.major }} --message "${{ inputs.tag-message-prefix }}${{ inputs.tag-prefix }}${{ inputs.major }}"
+        git tag --annotate ${{ inputs.tag-prefix }}${{ inputs.major }}.${{ inputs.minor }} --message "${{ inputs.tag-message-prefix }}${{ inputs.tag-prefix }}${{ inputs.major }}.${{ inputs.minor }}"
+
+        git push origin ${{ inputs.tag-prefix }}${{ inputs.major }}
+        git push origin ${{ inputs.tag-prefix }}${{ inputs.major }}.${{ inputs.minor }}
