@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/jacobsvante/tag-major-minor-action/compare/v0.1.0...v0.1.1) (2022-01-05)
+
+
+### Bug Fixes
+
+* Don't require tag-prefix and tag-message-prefix to be provided ([a6031e8](https://www.github.com/jacobsvante/tag-major-minor-action/commit/a6031e8ae111e490ce27d8dc2f59fc78ef6ffd92))
+* Use self! ([9d73dae](https://www.github.com/jacobsvante/tag-major-minor-action/commit/9d73dae8a4cb8f1e832c3bfed38de21688b07f1f))
+
 ### [0.1.1](https://github.com/jacobsvante/tag-major-minor-action/compare/v0.1.0...v0.1.1) (2022-01-05)
 
 
