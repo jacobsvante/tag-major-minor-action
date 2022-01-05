@@ -12,11 +12,11 @@ inputs:
     required: true
   tag-prefix:
     description: A prefix to add to the git tag
-    required: true
+    required: false
     default: v
   tag-message-prefix:
     description: "Add this to the start of the git tag message"
-    required: true
+    required: false
     default: "Release "
 runs:
   using: composite
