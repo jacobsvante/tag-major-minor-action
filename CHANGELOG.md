@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://github.com/jacobsvante/tag-major-minor-action/compare/v0.1.0...v0.1.1) (2022-01-05)
+
+
+### Bug Fixes
+
+* Use self! ([9d73dae](https://github.com/jacobsvante/tag-major-minor-action/commit/9d73dae8a4cb8f1e832c3bfed38de21688b07f1f))
+
 ## 0.1.0 (2022-01-05)
 
 
