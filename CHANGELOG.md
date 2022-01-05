@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0 (2022-01-05)
+
+
+### Features
+
+* Initial commit ([81d193d](https://www.github.com/jacobsvante/tag-major-minor-action/commit/81d193dd53921b0aede7641c5aa3217bcd501bb9))
+
 ### [0.1.1](https://github.com/jacobsvante/tag-major-minor-action/compare/v0.1.0...v0.1.1) (2022-01-05)
 
 
